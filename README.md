@@ -3,7 +3,7 @@ Status](https://travis-ci.org/ChipCastleDotCom/meteor-accounts-email.svg)](https
 
 ## Introduction
 
-Extract an email address from an Accounts object.
+A [Meteor package](https://atmospherejs.com/chipcastledotcom/accounts-email) for extracting an email address from an `Accounts` object.
 
 
 ## Installation
