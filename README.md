@@ -1,12 +1,12 @@
 [![Build
 Status](https://travis-ci.org/ChipCastleDotCom/meteor-accounts-email.svg)](https://travis-ci.org/ChipCastleDotCom/meteor-accounts-email)
 
-# INTRODUCTION
+## Introduction
 
 Extract an email address from an Accounts object.
 
 
-# INSTALLATION
+## Installation
 
     meteor add chipcastledotcom:accounts-email
 
@@ -52,26 +52,26 @@ The `email` variable above in this case would be set to
 Here's an example object using the **github** service, such as one
 that would be created when using the `accounts-gitub` package:
 
-  var githubAccount = {
-    "_id" : "Wasb5Nij7EjdS6ndC",
-    "createdAt" : "2015-09-11T22:19:15.241Z",
-    "services" : {
-      "github" : {
-        "id" : 31725,
-        "accessToken" : "7b949b4ab94956c7c289b419a22b2b302b99bcbe",
-        "email" : "github@example.com",
-        "username" : "chip"
-      },
-      "resume" : {
-        "loginTokens" : [
-          {
-            "when" : "2015-09-11T22:19:17.823Z",
-            "hashedToken" : "6OMXf5tL2dnTJx5CVItXMcoWzRZ8qr24jgDlTJwib+w="
-          }
-        ]
+    var githubAccount = {
+      "_id" : "Wasb5Nij7EjdS6ndC",
+      "createdAt" : "2015-09-11T22:19:15.241Z",
+      "services" : {
+        "github" : {
+          "id" : 31725,
+          "accessToken" : "7b949b4ab94956c7c289b419a22b2b302b99bcbe",
+          "email" : "github@example.com",
+          "username" : "chip"
+        },
+        "resume" : {
+          "loginTokens" : [
+            {
+              "when" : "2015-09-11T22:19:17.823Z",
+              "hashedToken" : "6OMXf5tL2dnTJx5CVItXMcoWzRZ8qr24jgDlTJwib+w="
+            }
+          ]
+        }
       }
-    }
-  };
+    };
 
 The email address could be determined by using this package as follows:
 
@@ -89,7 +89,7 @@ The following OAuth service libraries are supported:
   * `accounts-github`
 
 
-# SPECIAL THANKS TO 
+## SPECIAL THANKS TO
 
 [The Meteor Chef](http://themeteorchef.com/recipes/roll-your-own-authentication/) for the code inspiration.
 
