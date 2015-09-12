@@ -15,16 +15,21 @@ AccountsEmail = {
     }
     if (account.emails) {
       return account.emails[0].address;
+
     } else if (account.services) {
+
       var services = account.services;
-      if (services.github) {
-        return services.github.email;
+      if (services.facebook) {
+        return services.facebook.email;
+
       } else if (services.google) {
         return services.google.email;
-      } else if (services.facebook) {
-        return services.facebook.email;
+
       } else if (services.twitter) {
         return undefined;
+
+      } else if (services.github) {
+        return services.github.email;
       }
     }
   }
