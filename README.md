@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/ChipCastleDotCom/meteor-accounts-email.svg)](https://travis-ci.org/ChipCastleDotCom/meteor-accounts-email)
+
 # INTRODUCTION
 
 Extract an email address from an Accounts object.
