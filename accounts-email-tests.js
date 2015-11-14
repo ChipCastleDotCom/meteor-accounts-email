@@ -1,12 +1,24 @@
 (function () {
   'use strict';
 
-  Tinytest.add('Expect null for an empty Accounts object', function (test) {
-    test.equal(AccountsEmail.extract({}), null);
+  Tinytest.add('Expect empty object returned', function (test) {
+    test.equal(AccountsEmail.extract({}), {});
   });
 
-  Tinytest.add('Expect null for no Accounts object', function (test) {
-    test.equal(AccountsEmail.extract(), null);
+  Tinytest.add('Expect empty object if false is passed in', function (test) {
+    test.equal(AccountsEmail.extract(false), {});
+  });
+
+  Tinytest.add('Expect empty object if undefined is passed in', function (test) {
+    test.equal(AccountsEmail.extract(undefined), {});
+  });
+
+  Tinytest.add('Expect empty object if null is passed in', function (test) {
+    test.equal(AccountsEmail.extract(null), {});
+  });
+
+  Tinytest.add('Expect empty object if empty string is passed in', function (test) {
+    test.equal(AccountsEmail.extract(''), {});
   });
 
   var accountEmail = {
@@ -133,7 +145,7 @@
   };
 
   Tinytest.add('Expect undefined for Accounts object with Twitter service', function (test) {
-    test.isUndefined(AccountsEmail.extract(accountTwitter));
+    test.equal(AccountsEmail.extract(accountTwitter), accountTwitter);
   });
 
 })();

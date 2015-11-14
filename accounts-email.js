@@ -1,3 +1,4 @@
+'use strict';
 var isEmpty = function(obj) {
   for (var prop in obj) {
     if (obj.hasOwnProperty(prop)) {
@@ -11,7 +12,7 @@ AccountsEmail = {
   extract: function(obj) {
     var account = obj || {};
     if (isEmpty(account)) {
-      return null;
+      return account;
     }
     if (account.emails) {
       return account.emails[0].address;
@@ -26,7 +27,7 @@ AccountsEmail = {
         return services.google.email;
 
       } else if (services.twitter) {
-        return undefined;
+        return account;
 
       } else if (services.github) {
         return services.github.email;
